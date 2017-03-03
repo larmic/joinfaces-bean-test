@@ -4,6 +4,8 @@
 
 This is a simple demo to demonstrate how to test a jsf scoped bean in Spring Boot context using [JoinsFaces](https://github.com/joinfaces/joinfaces).
 
+This code is inspired by some commercial project commits of @DEXRAY and updated by @larmic
+
 ## Example
 
 ```java
