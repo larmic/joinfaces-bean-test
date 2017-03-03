@@ -11,7 +11,7 @@ This code is inspired by some commercial project commits of @DEXRAY and updated 
 ```java
 @Named
 @RequestScoped
-public class ContractsBean implements ContractsBean {
+public class ContractsBean {
 
     private String customerNumber;
 
