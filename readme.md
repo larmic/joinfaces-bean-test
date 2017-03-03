@@ -1,4 +1,5 @@
 # JSF Bean testing using JoinFaces and SpringBoot 
+
 [![Build Status](https://travis-ci.org/larmic/joinfaces-bean-test.svg?branch=master)](https://travis-ci.org/larmic/joinfaces-bean-test) [![Coverage Status](https://coveralls.io/repos/github/larmic/joinfaces-bean-test/badge.svg?branch=master)](https://coveralls.io/github/larmic/joinfaces-bean-test?branch=master)
 
 This is a simple demo to demonstrate how to test a jsf scoped bean in Spring Boot context using [JoinsFaces](https://github.com/joinfaces/joinfaces).
