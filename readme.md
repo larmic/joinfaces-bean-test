@@ -15,7 +15,10 @@ public class ContractsBean implements ContractsBean {
 
     @PostConstruct
     public void init() {
-        customerNumber = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("customerNumber");
+        customerNumber = FacesContext.getCurrentInstance()
+                .getExternalContext()
+                .getRequestParameterMap()
+                .get("customerNumber");
 
     }
 
@@ -49,7 +52,8 @@ public class ContractsBeanTest {
 
     @Test
     public void testCreateRequestScopedBeanWithCustomerNumberIsNull() throws Exception {
-        final ContractsBean bean = new JsfSpringBeanBuilder(context).build(RequestScopedContractsBean.class);
+        final ContractsBean bean = new JsfSpringBeanBuilder(context)
+                .build(RequestScopedContractsBean.class);
 
         assertThat(bean.getCustomerNumber()).isNull();
     }
