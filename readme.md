@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/larmic/joinfaces-bean-test.svg?branch=master)](https://travis-ci.org/larmic/joinfaces-bean-test)
+[![Build Status](https://travis-ci.org/larmic/joinfaces-bean-test.svg?branch=master)](https://travis-ci.org/larmic/joinfaces-bean-test) [![Coverage Status](https://coveralls.io/repos/github/larmic/joinfaces-bean-test/badge.svg?branch=master)](https://coveralls.io/github/larmic/joinfaces-bean-test?branch=master)
