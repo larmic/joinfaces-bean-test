@@ -3,12 +3,12 @@ package de.larmic.joinfaces.test.contract;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.faces.view.ViewScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import java.io.Serializable;
 
 @Named
-@ViewScoped
+@RequestScoped
 public class RequestScropedBeanUsesViewScopedContractsBean implements ContractsBean, Serializable {
 
     @Autowired
