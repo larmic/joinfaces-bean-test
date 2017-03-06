@@ -98,7 +98,7 @@
                     <mavenExecutorId>forked-path</mavenExecutorId>
                     <useReleaseProfile>false</useReleaseProfile>
                     <arguments>-D${gpg.arguments}</arguments>
-                    <releaseProfiles>release-sign-artifacts</releaseProfiles>
+                    <releaseProfiles>sonatype-oss-release</releaseProfiles>
                 </configuration>
             </plugin>
             <plugin>
