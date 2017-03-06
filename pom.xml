@@ -18,6 +18,8 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <maven-release-plugin.version>2.5</maven-release-plugin.version>
+
         <jsf-spring-boot-starter.version>2.3.6</jsf-spring-boot-starter.version>
         <spring-boot.version>1.5.1.RELEASE</spring-boot.version>
     </properties>
@@ -55,6 +57,19 @@
         <tag>HEAD</tag>
     </scm>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>sonatype-nexus-snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>sonatype-nexus-staging</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -64,6 +79,17 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven-release-plugin.version}</version>
+                <configuration>
+                    <!-- see http://blog.sonatype.com/2010/01/how-to-generate-pgp-signatures-with-maven/ -->
+                    <mavenExecutorId>forked-path</mavenExecutorId>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <arguments>-D${gpg.arguments}</arguments>
                 </configuration>
             </plugin>
             <plugin>
