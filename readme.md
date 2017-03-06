@@ -8,7 +8,7 @@ This code is inspired by some commercial project commits of @DEXRAY and updated 
 
 ## Usage
 
-add to your pom.xml
+Dependency is available in maven central repository. Just add to your pom.xml
 
 ```xml
 <dependency>
