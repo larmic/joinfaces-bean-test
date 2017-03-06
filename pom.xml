@@ -9,6 +9,7 @@
 
     <name>joinfaces-bean-test</name>
     <description>Demonstrates a way to create an JSF bean integration test</description>
+    <url>https://github.com/larmic/joinfaces-bean-test</url>
 
     <properties>
         <maven.min.version>3.2.1</maven.min.version>
