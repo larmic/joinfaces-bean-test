@@ -23,6 +23,10 @@
             <name>Lars Michaelis</name>
             <email>mail@larmic.de</email>
         </developer>
+        <developer>
+            <name>Stefan Meyer</name>
+            <email>st.meyer@uni-oldenburg.de</email>
+        </developer>
     </developers>
 
     <properties>
