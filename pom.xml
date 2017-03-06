@@ -11,6 +11,13 @@
     <description>Demonstrates a way to create an JSF bean integration test</description>
     <url>https://github.com/larmic/joinfaces-bean-test</url>
 
+    <licenses>
+        <license>
+            <name>MIT license</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
     <properties>
         <maven.min.version>3.2.1</maven.min.version>
         <maven.compiler.target>1.8</maven.compiler.target>
