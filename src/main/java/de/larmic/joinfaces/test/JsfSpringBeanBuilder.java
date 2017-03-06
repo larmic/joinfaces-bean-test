@@ -24,7 +24,7 @@ public class JsfSpringBeanBuilder {
 
     public <T> T build(Class<T> beanClass) {
         new FacesContextMock()
-                .withExternalParameter(parameterMap)
+                .withExternalParameters(parameterMap)
                 .replaceIn(context);
 
         return context.getBean(beanClass);
