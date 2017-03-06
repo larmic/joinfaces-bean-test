@@ -4,7 +4,7 @@
 
     <groupId>de.larmic</groupId>
     <artifactId>joinfaces-bean-test</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.2.ALPHA1</version>
     <packaging>jar</packaging>
 
     <name>joinfaces-bean-test</name>
@@ -54,7 +54,7 @@
         <url>https://github.com/larmic/joinfaces-bean-test</url>
         <connection>scm:git:https://github.com/larmic/joinfaces-bean-test</connection>
         <developerConnection>scm:git:https://github.com/larmic/joinfaces-bean-test</developerConnection>
-        <tag>HEAD</tag>
+        <tag>joinfaces-bean-test-0.2.ALPHA1</tag>
     </scm>
 
     <distributionManagement>
