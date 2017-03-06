@@ -6,6 +6,19 @@ This is a simple demo to demonstrate how to test a jsf scoped bean in Spring Boo
 
 This code is inspired by some commercial project commits of @DEXRAY and updated by @larmic and @renepa
 
+## Usage
+
+add to your pom.xml
+
+```xml
+<dependency>
+   <groupId>de.larmic</groupId>
+   <artifactId>joinfaces-bean-test</artifactId>
+   <version>0.2</version>
+   <scope>test</scope>
+</dependency>
+```
+
 ## Example
 
 ```java
