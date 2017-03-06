@@ -18,6 +18,13 @@
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+            <name>Lars Michaelis</name>
+            <email>mail@larmic.de</email>
+        </developer>
+    </developers>
+
     <properties>
         <maven.min.version>3.2.1</maven.min.version>
         <maven.compiler.target>1.8</maven.compiler.target>
