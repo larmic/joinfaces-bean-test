@@ -74,3 +74,31 @@ public class ContractsBeanTest {
     }
 }
 ```
+
+With version 0.3 you can also use injections
+
+```java
+@RunWith(SpringRunner.class)
+@ContextConfiguration(initializers = {InjectBeansTest.class})
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK, classes = TestApplication.class)
+public class ContractsBeanTest implements FacesContextMockApplicationContextInitializer {
+    
+    @Autowired
+    private ContractsBean contractsBean;
+    
+    @Override
+    public void initialize(ConfigurableApplicationContext applicationContext) {
+        new FacesContextMock()
+                .withExternalParameter("customerNumber", "value")
+                .replaceIn(applicationContext);
+    }
+    
+    @Test
+    public void testCreateRequestScopedBeanWithCustomerNumberIsNull() throws Exception {
+        final ContractsBean bean = new JsfSpringBeanBuilder(context)
+                .build(ContractsBean.class);
+
+        assertThat(bean.getCustomerNumber()).isNull();
+    }
+}
+```
