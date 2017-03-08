@@ -89,7 +89,7 @@ public class ContractsBeanTest implements FacesContextMockApplicationContextInit
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
         new FacesContextMock()
-                .withExternalParameter("customerNumber", "value")
+                .withExternalParameter("customerNumber", "unit-test-customer-number")
                 .replaceIn(applicationContext);
     }
     
@@ -98,7 +98,7 @@ public class ContractsBeanTest implements FacesContextMockApplicationContextInit
         final ContractsBean bean = new JsfSpringBeanBuilder(context)
                 .build(ContractsBean.class);
 
-        assertThat(bean.getCustomerNumber()).isNull();
+        assertThat(bean.getCustomerNumber()).isEqualTo("unit-test-customer-number");
     }
 }
 ```
