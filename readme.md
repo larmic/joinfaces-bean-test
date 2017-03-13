@@ -81,7 +81,7 @@ With version 0.3 you can also use injections
 @RunWith(SpringRunner.class)
 @ContextConfiguration(initializers = ContractsBeanTest.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
-public class ContractsBeanTest implements FacesContextMockApplicationContextInitializer {
+public class ContractsBeanTest implements ApplicationContextInitializer<ConfigurableApplicationContext> {
     
     @Autowired
     private ContractsBean contractsBean;
