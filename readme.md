@@ -87,10 +87,10 @@ public class ContractsBeanTest implements ApplicationContextInitializer<Configur
     private ContractsBean contractsBean;
     
     @Override
-    public void initialize(ConfigurableApplicationContext applicationContext) {
+    public void initialize(ConfigurableApplicationContext ctx) {
         new FacesContextMock()
                 .withExternalParameter("customerNumber", "unit-test-customer-number")
-                .replaceIn(applicationContext);
+                .replaceIn(ctx);
     }
     
     @Test
