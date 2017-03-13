@@ -14,7 +14,7 @@ Dependency is available in maven central repository. Just add to your pom.xml
 <dependency>
    <groupId>de.larmic</groupId>
    <artifactId>joinfaces-bean-test</artifactId>
-   <version>0.2</version>
+   <version>0.3</version>
    <scope>test</scope>
 </dependency>
 ```
@@ -79,7 +79,7 @@ With version 0.3 you can also use injections
 
 ```java
 @RunWith(SpringRunner.class)
-@ContextConfiguration(initializers = {InjectBeansTest.class})
+@ContextConfiguration(initializers = {ContractsBeanTest.class})
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK, classes = TestApplication.class)
 public class ContractsBeanTest implements FacesContextMockApplicationContextInitializer {
     
