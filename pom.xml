@@ -27,6 +27,10 @@
             <name>Stefan Meyer</name>
             <email>st.meyer@uni-oldenburg.de</email>
         </developer>
+        <developer>
+            <name>René Pastoor</name>
+            <email>renepa82@gmail.com</email>
+        </developer>
     </developers>
 
     <properties>
