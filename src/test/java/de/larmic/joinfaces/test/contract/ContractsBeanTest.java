@@ -22,7 +22,7 @@ public class ContractsBeanTest {
     private ApplicationContext context;
 
     @Test
-    public void testCreateRequestScopedBeanWithCustomerNumberIsSet() throws Exception {
+    public void testCreateRequestScopedBeanWithCustomerNumberIsSet() {
         final ContractsBean bean = new JsfSpringBeanBuilder(context)
                 .withExternalParameter("customerNumber", "unit-test-customer-number")
                 .build(RequestScopedContractsBean.class);
@@ -31,14 +31,14 @@ public class ContractsBeanTest {
     }
 
     @Test
-    public void testCreateRequestScopedBeanWithCustomerNumberIsNull() throws Exception {
+    public void testCreateRequestScopedBeanWithCustomerNumberIsNull() {
         final ContractsBean bean = new JsfSpringBeanBuilder(context).build(RequestScopedContractsBean.class);
 
         assertThat(bean.getCustomerNumber()).isNull();
     }
 
     @Test
-    public void testCreateViewScopedBeanWithCustomerNumberIsSet() throws Exception {
+    public void testCreateViewScopedBeanWithCustomerNumberIsSet() {
         final ContractsBean bean = new JsfSpringBeanBuilder(context)
                 .withExternalParameter("customerNumber", "1")
                 .build(ViewScopedContractsBean.class);
@@ -47,7 +47,7 @@ public class ContractsBeanTest {
     }
 
     @Test
-    public void testCreateViewScopedBeanWithCustomerNumberIsNull() throws Exception {
+    public void testCreateViewScopedBeanWithCustomerNumberIsNull() {
         final ContractsBean bean = new JsfSpringBeanBuilder(context)
                 .build(ViewScopedContractsBean.class);
 
@@ -55,7 +55,7 @@ public class ContractsBeanTest {
     }
 
     @Test
-    public void testCreateSessionScopedBeanWithCustomerNumberIsSet() throws Exception {
+    public void testCreateSessionScopedBeanWithCustomerNumberIsSet() {
         final ContractsBean bean = new JsfSpringBeanBuilder(context)
                 .withExternalParameter("customerNumber", "3")
                 .build(SessionScopedContractsBean.class);
@@ -64,24 +64,25 @@ public class ContractsBeanTest {
     }
 
     @Test
-    public void testCreateSessionScopedBeanWithCustomerNumberIsNull() throws Exception {
+    public void testCreateSessionScopedBeanWithCustomerNumberIsNull() {
         final ContractsBean bean = new JsfSpringBeanBuilder(context)
                 .build(SessionScopedContractsBean.class);
         assertThat(bean.getCustomerNumber()).isNull();
     }
 
     @Test
-    public void testCreateApplicationScopedBeanWithCustomerNumberIsNull() throws Exception {
+    public void testCreateApplicationScopedBeanWithCustomerNumberIsNull() {
         final ApplicationScopedContractsBean bean = new JsfSpringBeanBuilder(context)
                 .withExternalParameter("customerNumber", "5")
                 .build(ApplicationScopedContractsBean.class);
-        assertThat(bean.getCustomerNumber()).isNull();
+
+        assertThat(bean.getCustomerNumber()).isEqualTo("5");
         assertThat(bean.lookupContext()).isEqualTo("5");
     }
 
 
     @Test
-    public void testRequestScropedBeanUsesViewScopedContractsBean() throws Exception {
+    public void testRequestScropedBeanUsesViewScopedContractsBean() {
         final ContractsBean bean = new JsfSpringBeanBuilder(context)
                 .withExternalParameter("customerNumber", "6")
                 .build(RequestScropedBeanUsesViewScopedContractsBean.class);
