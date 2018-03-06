@@ -14,7 +14,7 @@ Dependency is available in maven central repository. Just add to your pom.xml
 <dependency>
    <groupId>de.larmic</groupId>
    <artifactId>joinfaces-bean-test</artifactId>
-   <version>0.3</version>
+   <version>0.4</version>
    <scope>test</scope>
 </dependency>
 ```
