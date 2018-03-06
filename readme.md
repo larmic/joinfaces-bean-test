@@ -19,6 +19,13 @@ Dependency is available in maven central repository. Just add to your pom.xml
 </dependency>
 ```
 
+## Compatibility list
+
+| Version | Spring Boot | JoinFaces |
+|:-------:|:-----------:|:---------:|
+| <= 0.3  |       1.5.x | 2.3.x
+| 0.4     |      2.0.x  | 3.0.0.RC1    
+
 ## Example
 
 ```java
@@ -102,11 +109,3 @@ public class ContractsBeanTest implements ApplicationContextInitializer<Configur
     }
 }
 ```
-
-## Compatibility list
-
-| Version | Spring Boot | JoinFaces |
-|:-------:|:-----------:|:---------:|
-| <= 0.3  |       1.5.x | 2.3.x
-| 0.4     |      2.0.x  | 3.0.0.RC1    
-
