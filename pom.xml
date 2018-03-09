@@ -43,7 +43,7 @@
         <maven-release-plugin.version>2.5</maven-release-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 
-        <jsf-spring-boot-starter.version>3.0.0.RC1</jsf-spring-boot-starter.version>
+        <jsf-spring-boot-starter.version>3.0.0</jsf-spring-boot-starter.version>
         <spring-boot.version>2.0.0.RELEASE</spring-boot.version>
     </properties>
 
@@ -51,11 +51,14 @@
         <dependency>
             <groupId>org.joinfaces</groupId>
             <artifactId>jsf-spring-boot-starter</artifactId>
-            <version>3.0.0.RC1</version>
-        </dependency>        <dependency>
+            <version>${jsf-spring-boot-starter.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- testing -->
@@ -63,6 +66,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <version>${spring-boot.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
