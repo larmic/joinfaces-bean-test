@@ -58,6 +58,7 @@ This demo allows following integration test:
 
 ```java
 @RunWith(SpringRunner.class)
+@ContextConfiguration(initializers = {FacesContextMockApplicationContextInitializer.class})
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 public class ContractsBeanTest {
     
@@ -65,7 +66,7 @@ public class ContractsBeanTest {
     private ApplicationContext context;
 
     @Test
-    public void testCreateRequestScopedBeanWithCustomerNumberIsSet() throws Exception {
+    public void testCreateRequestScopedBeanWithCustomerNumberIsSet() {
         final ContractsBean bean = new JsfSpringBeanBuilder(context)
                 .withExternalParameter("customerNumber", "unit-test-customer-number")
                 .build(ContractsBean.class);
@@ -74,39 +75,11 @@ public class ContractsBeanTest {
     }
 
     @Test
-    public void testCreateRequestScopedBeanWithCustomerNumberIsNull() throws Exception {
+    public void testCreateRequestScopedBeanWithCustomerNumberIsNull() {
         final ContractsBean bean = new JsfSpringBeanBuilder(context)
                 .build(ContractsBean.class);
 
         assertThat(bean.getCustomerNumber()).isNull();
-    }
-}
-```
-
-With version 0.3 you can also use injections
-
-```java
-@RunWith(SpringRunner.class)
-@ContextConfiguration(initializers = ContractsBeanTest.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
-public class ContractsBeanTest implements ApplicationContextInitializer<ConfigurableApplicationContext> {
-    
-    @Autowired
-    private ContractsBean contractsBean;
-    
-    @Override
-    public void initialize(ConfigurableApplicationContext ctx) {
-        new FacesContextMock()
-                .withExternalParameter("customerNumber", "unit-test-customer-number")
-                .replaceIn(ctx);
-    }
-    
-    @Test
-    public void testCreateRequestScopedBeanWithCustomerNumberIsNull() throws Exception {
-        final ContractsBean bean = new JsfSpringBeanBuilder(context)
-                .build(ContractsBean.class);
-
-        assertThat(bean.getCustomerNumber()).isEqualTo("unit-test-customer-number");
     }
 }
 ```
