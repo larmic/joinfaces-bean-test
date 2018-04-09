@@ -25,8 +25,8 @@ Dependency is available in maven central repository. Just add to your pom.xml
 |:-------:|:-----------:|:---------:|
 | <= 0.3  |       1.5.x | 2.3.x
 | 0.4     |      2.0.x  | 3.0.0.RC1    
-| 0.5     |      2.0.x  | 3.0.x    
-| 0.6     |      2.0.x  | 3.1.x    
+| 0.6     |      2.0.x  | 3.0.x    
+| 0.7     |      2.0.x  | 3.1.x    
 
 ## Example
 
