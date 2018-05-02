@@ -43,7 +43,7 @@
         <maven-release-plugin.version>2.5</maven-release-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 
-        <jsf-spring-boot-starter.version>3.1.1</jsf-spring-boot-starter.version>
+        <jsf-spring-boot-starter.version>3.2.0</jsf-spring-boot-starter.version>
         <spring-boot.version>2.0.1.RELEASE</spring-boot.version>
     </properties>
 
