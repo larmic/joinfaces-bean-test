@@ -43,8 +43,8 @@
         <maven-release-plugin.version>2.5</maven-release-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 
-        <jsf-spring-boot-starter.version>3.2.0</jsf-spring-boot-starter.version>
-        <spring-boot.version>2.0.1.RELEASE</spring-boot.version>
+        <jsf-spring-boot-starter.version>3.2.3</jsf-spring-boot-starter.version>
+        <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
     </properties>
 
     <dependencies>
@@ -58,6 +58,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>2.0</version>
             <scope>provided</scope>
         </dependency>
 

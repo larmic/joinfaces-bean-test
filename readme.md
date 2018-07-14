@@ -14,7 +14,7 @@ Dependency is available in maven central repository. Just add to your pom.xml
 <dependency>
    <groupId>de.larmic</groupId>
    <artifactId>joinfaces-bean-test</artifactId>
-   <version>0.8</version>
+   <version>0.9</version>
    <scope>test</scope>
 </dependency>
 ```
@@ -27,7 +27,7 @@ Dependency is available in maven central repository. Just add to your pom.xml
 | 0.4     |      2.0.x  | 3.0.0.RC1    
 | 0.6     |      2.0.x  | 3.0.x    
 | 0.7     |      2.0.x  | 3.1.x   
-| 0.8     |      2.0.x  | 3.2.x    
+| >= 0.8  |      2.0.x  | 3.2.x    
 
 ## Example
 
