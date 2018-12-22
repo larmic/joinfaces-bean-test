@@ -14,7 +14,7 @@ Dependency is available in maven central repository. Just add to your pom.xml
 <dependency>
    <groupId>de.larmic</groupId>
    <artifactId>joinfaces-bean-test</artifactId>
-   <version>0.9</version>
+   <version>1.0</version>
    <scope>test</scope>
 </dependency>
 ```
@@ -23,11 +23,12 @@ Dependency is available in maven central repository. Just add to your pom.xml
 
 | Version | Spring Boot | JoinFaces |
 |:-------:|:-----------:|:---------:|
-| <= 0.3  |       1.5.x | 2.3.x
+| <= 0.3  |      1.5.x  | 2.3.x
 | 0.4     |      2.0.x  | 3.0.0.RC1    
 | 0.6     |      2.0.x  | 3.0.x    
 | 0.7     |      2.0.x  | 3.1.x   
-| >= 0.8  |      2.0.x  | 3.2.x    
+| >= 0.8  |      2.0.x  | 3.2.x  
+| 1.0     |      2.1.x  | 4.x.x    
 
 ## Example
 
