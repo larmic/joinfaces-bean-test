@@ -40,7 +40,8 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <maven-release-plugin.version>2.5</maven-release-plugin.version>
+        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 
         <jsf-spring-boot-starter.version>4.0.5</jsf-spring-boot-starter.version>
@@ -101,7 +102,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
