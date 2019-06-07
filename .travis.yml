@@ -2,6 +2,9 @@ language: java
 
 jdk:
   - oraclejdk8
+  - oraclejdk11
+  - openjdk8
+  - openjdk11
 
 after_success:
   - mvn clean --quiet cobertura:cobertura coveralls:report
