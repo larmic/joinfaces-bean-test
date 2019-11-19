@@ -44,8 +44,8 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 
-        <jsf-spring-boot-starter.version>4.0.5</jsf-spring-boot-starter.version>
-        <spring-boot.version>2.1.5.RELEASE</spring-boot.version>
+        <jsf-spring-boot-starter.version>4.0.9</jsf-spring-boot-starter.version>
+        <spring-boot.version>2.1.9.RELEASE</spring-boot.version>
     </properties>
 
     <dependencies>
